@@ -1,0 +1,23 @@
+PODS:
+  - Alamofire (4.7.2)
+  - FastModule (0.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - FastModule (from `../FastModule`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  FastModule:
+    :path: "../FastModule"
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  FastModule: 8889a8794a6adcf8d678769c7a551236d11d5071
+
+PODFILE CHECKSUM: 8aa9fdaca23dbd5f3e8695d2352269d81cfae746
+
+COCOAPODS: 1.5.3
