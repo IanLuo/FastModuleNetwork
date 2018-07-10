@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "FastModuleNetwork"
   s.description  = "Provide network access for FastModule project"
   s.homepage     = "https://github.com/IanLuo/FastModuleNetwork"
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   s.author             = { "luoxu" => "ianluo63@gmail.com" }
   s.source       = { :git => "git@github.com:IanLuo/FastModuleNetwork.git", :tag => "#{s.version}" }
   s.source_files  ="Sources/**/*.swift"
