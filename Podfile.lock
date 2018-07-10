@@ -4,7 +4,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - FastModule (from `../FastModule`)
+  - "FastModule (from `git@github.com:IanLuo/FastModule.git`)"
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -12,12 +12,17 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   FastModule:
-    :path: "../FastModule"
+    :git: "git@github.com:IanLuo/FastModule.git"
+
+CHECKOUT OPTIONS:
+  FastModule:
+    :commit: 24703d97ebeacd9b95489f085c85b36cfa9fb4c7
+    :git: "git@github.com:IanLuo/FastModule.git"
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  FastModule: 8889a8794a6adcf8d678769c7a551236d11d5071
+  FastModule: 02b49485888287dbb7b246611e28ca006b927776
 
-PODFILE CHECKSUM: 8aa9fdaca23dbd5f3e8695d2352269d81cfae746
+PODFILE CHECKSUM: bd7b4206286c0dee89b7f3af107da59d29ba2958
 
 COCOAPODS: 1.5.3

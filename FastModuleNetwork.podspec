@@ -9,5 +9,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "git@github.com:IanLuo/FastModuleNetwork.git", :tag => "#{s.version}" }
   s.source_files  ="Sources/**/*.swift"
   s.dependency "Alamofire"
+  s.denpendency "FastModule"
 
 end
