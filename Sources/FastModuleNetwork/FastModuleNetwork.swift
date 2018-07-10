@@ -5,6 +5,8 @@ public class FastModuleHTTP: DynamicModuleTemplate {
     public func setupChildModules(nestable: Nestable) {}
     
     public func setupBindings(executable: Executable) {
+        
+        // handle rest request action
         executable.bindAction(pattern: ":content-type/:method/:url") { (param, responder, request) in
             do {
                 let methodString = try param.required(":method", type: String.self)
@@ -24,6 +26,30 @@ public class FastModuleHTTP: DynamicModuleTemplate {
             } catch {
                 responder.failure(error: error)
             }
+        }
+        
+        // handle download action
+        executable.bindAction(pattern: "download/:url") { (param, responder, request) in
+            do {
+                let url = try param.required(":url", type: String.self)
+                
+                let task = try AlamofireNetworkManager.download(path: url, callback: { (data, error) in
+                    if let error = error {
+                        responder.failure(error: error)
+                    } else {
+                        responder.success(value: data)
+                    }
+                }, progress: { progress in
+                    executable.update(properties: ["progress": progress])
+                })
+                
+                responder.onCancel {
+                    task?.cancel()
+                }
+            } catch {
+                responder.failure(error: error)
+            }
+            
         }
     }
     
